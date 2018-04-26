@@ -7,10 +7,9 @@ public class BankAccount {
 	public static void main(String[] args) throws InterruptedException {
 		BankAccount ba = new BankAccount();
 		ba.deposit(1000000);
-		Object monitor = new Object();
 
-		BankActivityThread t1 = new BankActivityThread(ba, monitor);
-		BankActivityThread t2 = new BankActivityThread(ba, monitor);
+		BankActivityThread t1 = new BankActivityThread(ba);
+		BankActivityThread t2 = new BankActivityThread(ba);
 		
 		t1.start();
 		t2.start();
@@ -30,14 +29,12 @@ public class BankAccount {
 	public static class BankActivityThread extends Thread {
 
 		private BankAccount bankAccount;
-		private Object monitor;
 		private long[] deposits = new long[10000];
 		private long[] transfers = new long[10000];
 		
-		public BankActivityThread(BankAccount bankAccount, Object monitor) {
+		public BankActivityThread(BankAccount bankAccount) {
 			super();
 			this.bankAccount = bankAccount;
-			this.monitor = monitor;
 		}
 
 		public long evaluateResult(long input) {
@@ -60,12 +57,9 @@ public class BankAccount {
 				
 				deposits[i] = amountDeposit;
 				transfers[i] = amountTransfer;
-
-				synchronized(monitor) {
-					bankAccount.deposit(amountDeposit);
-					bankAccount.transfer(amountTransfer);
-				}
-				
+					
+				bankAccount.deposit(amountDeposit);
+				bankAccount.transfer(amountTransfer);
 
 			}
 		}
