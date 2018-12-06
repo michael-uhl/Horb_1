@@ -14,8 +14,6 @@ public class MailAliases {
 		h.put("Paula", "user0125@mail.uofm.edu");
 		h.put("Lissa", "lb3@gateway.fhdto.northsurf.dk");
 		
-		h = null;
-		
 		// Ausgabe
 		System.out.println(h.get("Fritz"));
 		
