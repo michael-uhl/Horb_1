@@ -22,7 +22,7 @@ public class BubbleSort {
 		System.out.println(Arrays.toString(list));
 	}
 
-	public static void BubbleSort(int[] num) {
+	public static int[] bubbleSort(int[] num) {
 		int j;
 		boolean flag = true; // set flag to true to begin first pass
 		int temp; // holding variable
@@ -39,5 +39,7 @@ public class BubbleSort {
 				}
 			}
 		}
+		
+		return num;
 	}
 }
