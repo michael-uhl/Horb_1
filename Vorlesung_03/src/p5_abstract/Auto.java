@@ -1,6 +1,6 @@
 package p5_abstract;
 
-public abstract class Auto {
+public abstract class Auto extends Fahrzeug {
 
 	String color;
 	double maxSpeed;
@@ -22,8 +22,6 @@ public abstract class Auto {
 		System.out.println("Auto gestartet.");
 	}
 	
-
-	
 	public void stop() {
 		System.out.println("Auto gestoppt.");
 	}
@@ -32,4 +30,11 @@ public abstract class Auto {
 	
 	public abstract void slowDown();
 }
+
+
+
+
+
+
+
 
