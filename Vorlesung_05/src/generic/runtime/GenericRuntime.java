@@ -12,8 +12,8 @@ public class GenericRuntime {
 	public static void main(String[] args) {
 		{
 			Map<String, Integer> test = new HashMap<String, Integer>();
-			test.put("fünf", 5);
-			System.out.println(test.get("fünf"));
+			test.put("f√ºnf", 5);
+			System.out.println(test.get("f√ºnf"));
 		}
 		{
 			List<String> stringList = new ArrayList<String>();
@@ -25,11 +25,11 @@ public class GenericRuntime {
 			System.out.println(stringList.getClass().getName());
 			System.out.println(example2.getClass().getName());
 			System.out.println(example2 instanceof List<?>);
-			
+
 			List added = new LinkedList();
 			added.add(stringList);
 			added.add(example2);
-			
+
 			List<String> gotten = (List<String>)added.get(1);
 			if(gotten instanceof List<?>) {
 				gotten.add("geht nicht.");
