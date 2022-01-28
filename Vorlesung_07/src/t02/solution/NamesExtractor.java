@@ -23,10 +23,10 @@ import java.util.TreeSet;
  * (1): Datei einlesen.
  * (2): Kommaseparierte Werte Pro Zeile.
  * (3): Leere Zeilen raus.
- * (4): FÃ¼hrende Leerzeichen raus.
+ * (4): Führende Leerzeichen raus.
  * (5): Sortieren.
- * (6): ZÃ¤hlen.
- * (7): Sortieren fÃ¼r endgÃ¼ltige Ausgabe (grÃ¶ÃŸter Wert zuerst).
+ * (6): Zählen.
+ * (7): Sortieren für endgültige Ausgabe (größter Wert zuerst).
  */
 
 public class NamesExtractor {
