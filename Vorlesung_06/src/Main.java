@@ -7,7 +7,7 @@ import java.util.ListIterator;
 public class Main {
 	
 	public static void main(String[] args) {
-		Glas<String> gg = new Glas<String>("Wei√üwein");
+		Glas<String> gg = new Glas<String>("Weiﬂwein");
 		
 		try {
 			method(10);
